@@ -1,5 +1,5 @@
 // ══════════════════════════════════════════
-//  PROCESADOR DEL FORMULARIO Y LOCALSTORAGE
+//  ENVIAR FORMULARIO DIRECTO A TU WHATSAPP
 // ══════════════════════════════════════════
 const form = document.getElementById('formParticipacion');
 if (form) {
@@ -11,27 +11,33 @@ if (form) {
     const asunto = document.getElementById('asunto').value;
     const mensaje = document.getElementById('mensaje').value.trim();
 
+    // 📱 Tu número real de WhatsApp configurado (Colombia: 57)
+    const miNumeroWhatsApp = '573138672126'; 
+
     if (!nombre || !correo) {
       alert('Por favor completa los campos obligatorios.');
       return;
     }
 
-    const nuevaRespuesta = {
-      nombre: nombre,
-      correo: correo,
-      asunto: asunto,
-      mensaje: mensaje,
-      fecha: new Date().toLocaleString('es-CO')
-    };
+    // Armamos el texto formateado que te llegará al WhatsApp
+    let textoWhatsApp = `*¡Nuevo mensaje desde Doble Mundo Alemán!* 🇩🇪\n\n`;
+    textoWhatsApp += `👤 *Nombre:* ${nombre}\n`;
+    textoWhatsApp += `📧 *Correo:* ${correo}\n`;
+    textoWhatsApp += `📌 *Asunto:* ${asunto}\n`;
+    if (mensaje) {
+      textoWhatsApp += `💬 *Mensaje/Propuesta:* ${mensaje}\n`;
+    }
 
-    // Obtener respuestas guardadas previas
-    let respuestas = JSON.parse(localStorage.getItem('respuestasFormulario') || '[]');
-    respuestas.unshift(nuevaRespuesta); // Agregar al inicio
+    // Convertimos el texto a un formato compatible con enlaces/URLs
+    const mensajeCodificado = encodeURIComponent(textoWhatsApp);
 
-    // Guardar en el almacenamiento del navegador
-    localStorage.setItem('respuestasFormulario', JSON.stringify(respuestas));
+    // Creamos la URL directa a tu WhatsApp
+    const urlWhatsApp = `https://wa.me/${miNumeroWhatsApp}?text=${mensajeCodificado}`;
 
-    alert('¡Muchas gracias ' + nombre + '! Tu mensaje ha sido enviado correctamente al Centro de Interés.');
+    // Abrimos WhatsApp en una nueva pestaña
+    window.open(urlWhatsApp, '_blank');
+
+    alert('¡Muchas gracias, ' + nombre + '! Serás redirigido a WhatsApp para enviar tu mensaje.');
     form.reset();
   });
 }
