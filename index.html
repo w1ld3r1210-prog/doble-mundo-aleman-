@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doble Mundo Alemán — Centro de Interés</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="scrollBubble">
+  <span id="bubbleTxt"></span>
+  <div class="bubble-author" id="bubbleAuthor"></div>
+</div>
+
+<!-- NAV MODERNO FLOTANTE EN TRICOLOR ALEMÁN -->
+<nav>
+  <div class="bandera-fondo"></div>
+  <div class="nav-contenido">
+    <div class="logo">Doble Mundo Alemán</div>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#fases">Nosotros</a></li>
+      <li><a href="#modulos">¿Qué se hace?</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="inicio">
+  <video autoplay muted loop playsinline id="video-fondo">
+    <source src="img/video.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1 class="hero-title">Doble Mundo Alemán</h1>
+    <p class="hero-sub">Aprende, habla y vive el idioma sin fronteras</p>
+    <p class="hero-dates">Centro de Interés</p>
+    <p id="typewriter"></p>
+  </div>
+  <div class="scroll-hint">▼ Explora nuestro centro ▼</div>
+</section>
+
+<!-- SECCIÓN EN ZIG-ZAG: INFORMACIÓN -->
+<section class="sec-fases-container" id="fases">
+  <h2 class="sec-title">Información del Centro de Interés</h2>
+
+  <div class="fases-grid">
+    <div class="tarjeta tarjeta-izquierda">
+      <div class="contenedor-imagen">
+        <img src="img/nivel-1.jpg" alt="¿Quiénes Somos?">
+      </div>
+      <div class="contenedor-texto">
+        <h3 class="anio">¿Quiénes Somos?</h3>
+        <p><strong>Doble Mundo Alemán:</strong> Un espacio académico diseñado para introducir a los estudiantes en el fascinante mundo del idioma, la cultura y la fonética alemana de forma dinámica e interactiva.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta tarjeta-derecha">
+      <div class="contenedor-texto">
+        <h3 class="anio">¿Qué Buscamos?</h3>
+        <p><strong>Inmersión Lingüística:</strong> Nuestro objetivo principal es enseñar a los estudiantes las bases del idioma alemán, facilitando la comprensión de palabras y expresiones cotidianas para perder el miedo a hablar.</p>
+      </div>
+      <div class="contenedor-imagen">
+        <img src="img/nivel-2.jpg" alt="¿Qué Buscamos?">
+      </div>
+    </div>
+
+    <div class="tarjeta tarjeta-izquierda">
+      <div class="contenedor-imagen">
+        <img src="img/nivel-3.jpg" alt="¿Cómo Trabajamos?">
+      </div>
+      <div class="contenedor-texto">
+        <h3 class="anio">¿Cómo Trabajamos?</h3>
+        <p><strong>Dinámica de Clase:</strong> El profesor explica detalladamente palabras y frases clave. Posteriormente, ponemos el conocimiento en práctica preguntando sus significados y construyendo conversaciones cortas y sencillas.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta tarjeta-derecha">
+      <div class="contenedor-texto">
+        <h3 class="anio">Práctica y Pronunciación</h3>
+        <p><strong>Expresión Oral:</strong> Nos enfocamos fuertemente en aprender y corregir la pronunciación correcta mediante la repetición guiada, simulaciones y diálogos prácticos del día a día.</p>
+      </div>
+      <div class="contenedor-imagen">
+        <img src="img/nivel-4.jpg" alt="Metodología">
+      </div>
+    </div>
+
+    <div class="banner-alemania-card">
+      <h3>🇩🇪 Willkommen in Deutschland!</h3>
+      <p>Un espacio formativo enfocado en potenciar las habilidades comunicativas e interculturales de los estudiantes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN ¿QUÉ SE HACE EN LAS CLASES? -->
+<div class="sec-full" id="modulos">
+  <div class="sec-inner">
+    <h2 class="sec-title">¿Qué se hace en las clases?</h2>
+    <div class="bandas-grid">
+      <div class="bcard" onclick="this.classList.toggle('open')">
+        <div class="bcard-icon">🗣️</div><div class="bcard-name">Explicación & Práctica</div><div class="bcard-years">Vocabulario y Frases</div>
+        <ul class="bcard-songs">
+          <li>Explicación de términos</li>
+          <li>Preguntas de significado</li>
+          <li>Conversaciones cortas</li>
+          <li>Corrección fonética</li>
+        </ul>
+        <div class="bcard-detail">El docente guía paso a paso en la comprensión de estructuras alemanas básicas para aplicarlas conversacionalmente de inmediato.</div>
+      </div>
+      <div class="bcard" onclick="this.classList.toggle('open')">
+        <div class="bcard-icon">🎧</div><div class="bcard-name">Comprensión Auditiva</div><div class="bcard-years">Audios y Escucha</div>
+        <ul class="bcard-songs">
+          <li>Audios guiados</li>
+          <li>Entrenamiento del oído</li>
+          <li>Acentos y entonación</li>
+          <li>Frases cotidianas</li>
+        </ul>
+        <div class="bcard-detail">Entrenamos el oído escuchando la entonación exacta de hablantes nativos adaptada al nivel escolar.</div>
+      </div>
+      <div class="bcard" onclick="this.classList.toggle('open')">
+        <div class="bcard-icon">📜</div><div class="bcard-name">Estructura & Escritura</div><div class="bcard-years">Gramática Básica</div>
+        <ul class="bcard-songs">
+          <li>Oraciones sencillas</li>
+          <li>Construcción de textos</li>
+          <li>Reglas gramaticales</li>
+          <li>Apuntes del idioma</li>
+        </ul>
+        <div class="bcard-detail">Aprendemos cómo se estructuran correctamente las oraciones escritas en alemán de manera simple y clara.</div>
+      </div>
+      <div class="bcard" onclick="this.classList.toggle('open')">
+        <div class="bcard-icon">🎯</div><div class="bcard-name">Inmersión & Cultura</div><div class="bcard-years">Cultura Alemana</div>
+        <ul class="bcard-songs">
+          <li>Costumbres de Alemania</li>
+          <li>Dinámicas grupales</li>
+          <li>Juegos de roles</li>
+          <li>Práctica activa</li>
+        </ul>
+        <div class="bcard-detail">Actividades vivenciales para conectar el idioma con las tradiciones y la vida real en los países de habla alemana.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECCIÓN DE ADMINISTRADORES Y EQUIPO -->
+<section class="sec-equipo" id="equipo">
+  <h2 class="sec-title">Administradores y Responsables</h2>
+  <div class="equipo-grid">
+    <div class="ecard">
+      <div class="e-role">Jefe Inmediato / Administradora</div>
+      <div class="e-name">Prof. Alba Luz Malagón Perilla</div>
+      <p class="e-desc">Coordinación y supervisión general de los Centros de Interés de la institución.</p>
+    </div>
+    <div class="ecard principal">
+      <div class="e-role">Profesor Encargado</div>
+      <div class="e-name">Prof. Alejandro</div>
+      <p class="e-desc">Líder pedagógico, encargado de impartir las clases, explicaciones y dinámicas de alemán.</p>
+    </div>
+    <div class="ecard">
+      <div class="e-role">Dinamizador Estudiantil</div>
+      <div class="e-name">Wilder Ramos</div>
+      <p class="e-desc">Apoyo logístico, desarrollo tecnológico y dinamización de las actividades del centro.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULARIO DE INSCRIPCIÓN Y PROPUESTAS -->
+<div class="form-container">
+  <h2 class="sec-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Participación Estudiantil</h2>
+  <p style="color: var(--gris-texto); text-align: center; margin-bottom: 20px; font-size: 0.9rem;">
+    Inscríbete al centro de interés, propón tus ideas o contacta a los responsables.
+  </p>
+
+  <form id="formParticipacion">
+      <label class="form-label" for="i_nombre">Tu Nombre *</label>
+      <input class="form-control" type="text" id="i_nombre" name="nombre" placeholder="Ej. Ana Gómez" required>
+
+      <label class="form-label" for="i_correo">Correo Electrónico *</label>
+      <input class="form-control" type="email" id="i_correo" name="correo" placeholder="correo@ejemplo.com" required>
+
+      <label class="form-label" for="asunto">¿Qué deseas hacer? *</label>
+      <select class="form-select" id="asunto" name="asunto">
+          <option>Inscribirme al Centro de Interés</option>
+          <option>Proponer una idea o temática</option>
+          <option>Contactar a los responsables</option>
+      </select>
+
+      <label class="form-label" for="mensaje">Mensaje o Propuesta</label>
+      <textarea class="form-control" id="mensaje" name="mensaje" cols="30" rows="3" placeholder="Escribe tu mensaje o idea aquí..."></textarea>
+
+      <div class="form-check mt-3">
+          <input class="form-check-input" type="checkbox" id="term" name="term" required>
+          <label class="form-check-label" for="term">
+              Acepto los <a href="#" style="color: var(--rojo-alemania);">Términos y Participación del CI</a>
+          </label>
+      </div>
+
+      <br>
+
+      <div class="text-center" style="text-align: center;">
+          <input class="btn btn-success" type="submit" value="Enviar Solicitud">
+          <input class="btn btn-danger" type="reset" value="Cancelar">
+      </div>
+  </form>
+</div>
+
+<footer>
+  <div class="fquote">"Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt."</div>
+  <div class="fsub">— Ludwig Wittgenstein (Los límites de mi lenguaje significan los límites de mi mundo)</div>
+  <div class="fdates">Doble Mundo Alemán &nbsp;✦&nbsp; Centro de Interés</div>
+  <div style="margin-top:1.5rem;">
+    <a href="respuestas.html" style="color: #666; font-size: 0.75rem; text-decoration: none; border: 1px solid #333; padding: 4px 10px; border-radius: 4px;">🔒 Ver Respuestas (Administración)</a>
+  </div>
+  <div style="margin-top:0.8rem;color:#a0aec0;font-size:.78rem">Hecho con pasión · 2026</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
